@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Lesson 7 - Cart Quantity 3.0</title>
+    </head>
+  <body>
+    <p>Cart Quantity</p>
+
+      <button onclick="updateCartQuantity('show','action');">Show Quantity</button>
+
+      <button onclick="updateCartQuantity(1,'+');">Add to Cart</button>
+
+      <button onclick="updateCartQuantity(2,'+');">+2</button>
+
+      <button onclick="updateCartQuantity(3,'+');">+3</button>
+
+      <button onclick="updateCartQuantity('reset','action');">Reset Cart</button>
+
+      <button onclick="updateCartQuantity(-1,'-');">Remove from Cart</button>
+
+      <button onclick="updateCartQuantity(-2,'-');">-2</button>
+      
+      <button onclick="updateCartQuantity(-3,'-');">-3</button>
+
+    <script>
+      let cartQuantity = 0;
+
+      function updateCartQuantity(num,type) {
+        
+        
+        if (type = '+') {
+          if (cartQuantity > 10) {
+            cartQuantity = 10;
+            alert('The cart is full!');
+            return;
+          }
+          
+          else if (num === 1) {
+            cartQuantity++;
+            console.log(`Cart quantity: ${cartQuantity}`)
+            return;
+          }
+          
+          else if (num === 2) {
+            cartQuantity += 2;
+            console.log(`Cart quantity: ${cartQuantity}`)
+            return;
+          }
+          
+          else if (num === 3) {
+            cartQuantity += 3;
+            console.log(`Cart quantity: ${cartQuantity}`)
+            return;
+          }
+        }
+
+
+        if (type = '-') {
+          if (cartQuantity < 0) {
+            cartQuantity = 0;
+            alert('The cart is empty!');
+            return;
+          }
+          
+          else if (num === -1) {
+            cartQuantity--;
+            console.log(`Cart quantity: ${cartQuantity}`)
+            return;
+          }
+          
+          else if (num === -2) {
+            cartQuantity -= 2;
+            console.log(`Cart quantity: ${cartQuantity}`)
+            return;
+          }
+          
+          else if (num === -3) {
+            cartQuantity -= 3;
+            console.log(`Cart quantity: ${cartQuantity}`)
+            return;
+          }
+        }
+
+
+
+        else if (type = 'action') {
+          
+          if (num === 'show') {
+            console.log(`Cart quantity: ${cartQuantity}`);
+            return;
+          }
+  
+          else if (num === 'reset') {
+            cartQuantity = 0;
+            console.log(`Cart quantity: ${cartQuantity}`);
+            return;
+          }
+        }
+
+      }
+      </script>
+
+  </body>
+  </html>

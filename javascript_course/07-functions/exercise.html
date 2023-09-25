@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 7 - Exercise</title>
+</head>
+<body>
+  <script>
+    function greet(name) {
+      if (name) {
+        console.log(`Hello, ${name}!`);
+      }
+      else if (!name) {
+        console.log('Hello there!')
+      }
+    }
+
+    greet('Simon');
+    greet('Lima');
+    greet();
+    greet(0);
+
+    function convertToFahrenheit(celsius) {
+      fahrenheit = (celsius * 9 / 5) + 32;
+      return fahrenheit;
+    }
+
+    console.log(convertToFahrenheit(25));
+    console.log(convertToFahrenheit(10));
+    console.log(convertToFahrenheit(55));
+
+    function convertToCelsius(fahrenheit) {
+      celsius = (fahrenheit - 32) * 5 / 9;
+      return celsius;
+    }
+
+    console.log(convertToCelsius(77));
+    console.log(convertToCelsius(113));
+    console.log(convertToCelsius(32));
+
+    function convertTemperature(num,temp) {
+      if (temp === 'F') {
+        const fahrenheit = ((num * 9 / 5) + 32) + 'F';
+        return fahrenheit;
+      } 
+      
+      else if (temp === 'C') {
+        const celsius = ((num - 32) * 5 / 9) + 'C';
+        return celsius;
+      }
+    }
+
+    console.log(convertTemperature(30,'F'));
+    console.log(convertTemperature(347,'C'));
+    console.log(convertTemperature(23,'C'));
+  </script>
+</body>
+</html>

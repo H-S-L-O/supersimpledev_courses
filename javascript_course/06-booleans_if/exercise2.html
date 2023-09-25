@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 6 - Exercise 2</title>
+</head>
+<body>
+  <script>
+    /* const random = Math.random();
+    let result = '';
+      if(random < 0.5) {
+        result ='heads';
+      } else {
+        result ='tails';
+      }
+    
+    let guess = 'heads';
+    if (result === guess) {
+      console.log('You win!');
+    } else {
+      console.log('You lose!')
+    } */
+
+    const random = Math.random();
+    let result = (random < 0.5) ? 'heads': 'tails';
+
+    let guess = 'heads'; 
+    (guess === result) ? console.log('You win!') : console.log('You lose!');
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Lesson 7 - Calculator 2.0</title>
+    </head>
+  <body>
+
+    <p>
+    <button onclick="updateCalculation(1)">1</button>
+
+    <button onclick="updateCalculation(2)">2</button>
+
+    <button onclick="updateCalculation(3);">3</button>
+
+    </p>
+    <button onclick="updateCalculation('+')">+</button>
+
+    <button onclick="updateCalculation('=');">=</button>
+
+    <button onclick="updateCalculation();">C</button>
+
+
+
+    <script>
+      let calculation = '';
+
+      function updateCalculation(num) {
+        
+        if (num === '=') {
+          calculation = eval(calculation);
+          if (calculation === undefined) {
+          calculation = '';
+          console.log(calculation);
+          return calculation;
+          }
+          console.log(calculation);
+          return calculation;
+        }
+        
+        else if (num === '+') {
+          calculation += ' + ';
+          console.log(calculation);
+          return calculation;
+        }
+        
+        else if (!num) {
+          calculation = ''
+          console.log(calculation);
+          return calculation;
+        } 
+        
+        else if (num) {
+          calculation += `${num}`;
+          console.log(calculation);
+          return calculation;
+        }
+      }
+    </script>
+
+  </body>
+  </html>
